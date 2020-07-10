@@ -11,7 +11,6 @@ export default class SearchFormBox extends Component {
 
         this.props.onSubmit(this.state.inputValue);
         this.setState({inputValue:''});
-        // console.log(this.state.inputValue);
     }
     render() {
         return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ImageGallery({items}){
-
+    
     return(
         <>
             {items.map( item  => (

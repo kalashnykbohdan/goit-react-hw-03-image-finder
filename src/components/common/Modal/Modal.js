@@ -3,14 +3,16 @@ import React, {Component} from 'react';
 
 export default class Modal extends Component {
     componentDidMount(){
-        console.log('Modal componentDidMount');
 
+        // window.addEventListener('click', this.openModalImage);
         window.addEventListener('keydown', this.handleKeyDown)
     }
     componentWillUnmount(){
-        console.log('Modal componentWillUnmount');
+        
+        // window.removeEventListener('click', this.openModalImage);
         window.removeEventListener('keydown', this.handleKeyDown)
     }
+
     handleKeyDown = e =>{
         if(e.code === 'Escape'){
             this.props.onClose();

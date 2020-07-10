@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
-import Sections from './Sections';
+import Sections from './common/Sections';
 
 import Loader from 'react-loader-spinner';
 
-import Notification from './Notification'
+import Notification from './common/Notification'
 import ImageGallery from './ImageGallery'
 import Searchbar from './Searchbar';
-import Button from './Button';
-import Modal from './Modal';
+import Button from './common/Button';
+import Modal from './common/Modal';
 
 import articlesApi from '../services/articlesApi';
 import './App.css';
@@ -34,6 +34,7 @@ export default class App extends Component{
   componentWillUnmount() {
     window.removeEventListener('click', this.openModalImage);
 }
+
 
   componentDidUpdate(prevProps, prevState){
     const prevQuery = prevState.searchQuery;
@@ -107,8 +108,6 @@ export default class App extends Component{
           {showModal && <Modal onClose={this.toggleModal}>
             {<img src={largeImageURL} alt="img" />}
           </Modal>}
-
-
         </Sections>
       </>
     )
